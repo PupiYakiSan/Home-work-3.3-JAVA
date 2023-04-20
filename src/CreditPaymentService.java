@@ -4,7 +4,7 @@ public class CreditPaymentService {
 
         double paymentMonth;
         int creditTermMonth = creditTermYear * 12;
-        double interestRate = interestRatePercent * creditTermYear / 100 / creditTermMonth;
+        double interestRate = interestRatePercent / 100 / 12;
 
         paymentMonth = creditAmountRuble * interestRate / (1 - Math.pow((1 + interestRate), (-1 * creditTermMonth)));
 
